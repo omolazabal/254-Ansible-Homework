@@ -1,18 +1,18 @@
 ---
 - name: install mtr
-    package:
-      name: mtr
-      state: latest
+  package:
+    name: mtr
+    state: latest
 - name: install tcpdump
-    package:
-      name: tcpdump
-      state: latest
+  package:
+    name: tcpdump
+    state: latest
 - name: install nano
-    package:
-      name: nano
-      state: latest
+  package:
+    name: nano
+    state: latest
 - name: install cowsay
-    package:
-      name: cowsay
-      state: latest
+  package:
+    name: cowsay
+    state: latest
 
