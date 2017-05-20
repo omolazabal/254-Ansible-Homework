@@ -1,0 +1,11 @@
+---
+- iptables
+    chain: INPUT
+    protocol: UDP
+    jump: DROP
+  become: yes
+- iptables
+    chain: INPUT
+    protocol: TCP
+    jump: DROP
+  become: yes

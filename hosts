@@ -1,3 +1,4 @@
-tiny-debian8-32 ansible_port=10.0.5.101
-tiny-centos7-32 ansible_port=10.0.5.102
-tiny-centos7-32-b ansible_port=10.0.5.103
+[vps]
+10.0.5.101
+10.0.5.102
+10.0.5.103

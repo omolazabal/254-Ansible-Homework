@@ -6,5 +6,7 @@
         name: manager
         group: wheel
   roles:
-    -role: install_packages
-    -role: transfer_keys
+    - role: install_packages
+    - role: transfer_keys
+    - role: set_DNS
+    - role: set_iptables
