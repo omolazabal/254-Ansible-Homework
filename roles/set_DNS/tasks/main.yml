@@ -1,6 +1,6 @@
 ---
-- nmcli
-   conn_name: eth0
+- nmcli:
+   conn_name: np3s0
    dns4:
      - 10.0.5.1
      - 209.244.0.3
