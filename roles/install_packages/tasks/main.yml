@@ -11,8 +11,4 @@
   package:
     name: nano
     state: latest
-- name: install cowsay
-  package:
-    name: cowsay
-    state: latest
 
