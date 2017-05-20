@@ -1,0 +1,9 @@
+---
+- name: Set authorized key took from file
+  authorized_key:
+    user: student 
+    state: present 
+    key: "{{ item }}
+  with_file:
+    - id_rsa.pub
+

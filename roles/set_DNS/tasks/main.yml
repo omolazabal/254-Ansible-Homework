@@ -1,0 +1,7 @@
+---
+- nmcli
+   conn_name: eth0
+   dns4:
+     - 10.0.5.1
+     - 209.244.0.3
+   state: present
