@@ -2,3 +2,6 @@
 10.0.5.101
 10.0.5.102
 10.0.5.103
+
+[vps:vars]
+ansible_password=vagrant

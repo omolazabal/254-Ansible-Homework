@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  vars:
+    ansible_user: manager
+    ansible_become_user: root
+    ansilbe_become_pass: electric dancy pants
+  roles:
+    - role: set_iptables
