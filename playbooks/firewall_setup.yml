@@ -7,3 +7,4 @@
     ansilbe_become_pass: electric dancy pants
   roles:
     - role: drop_protocols
+    - role: set_iptables

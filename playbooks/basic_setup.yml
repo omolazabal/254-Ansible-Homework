@@ -4,11 +4,8 @@
   vars:
     ansible_user: root
     ansible_ssh_pass: electric dancy pants
-  tasks:
-    - user:
-        name: manager
-        group: wheel
   roles:
+    - role: create_user
     - role: install_packages
     - role: transfer_keys
     - role: set_DNS

@@ -1,0 +1,14 @@
+---
+- group:
+    name: wheel
+    state: present
+- lineinfile:
+    dest: /etc/sudoers
+    state: present
+    regexp: '^%wheel'
+    line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+- user:
+    name: manager
+    groups: "wheel"
+    append: yes
+    state: present
