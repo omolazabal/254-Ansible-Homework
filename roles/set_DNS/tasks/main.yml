@@ -2,5 +2,7 @@
 - nmcli:
    conn_name: enp3s0
    type: ethernet
-   dns4: ["10.0.5.1", "209.244.0.3"]
+   dns4:
+     - 10.0.5.1
+     - 209.244.0.3
    state: present
