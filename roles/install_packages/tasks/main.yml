@@ -1,14 +1,10 @@
 ---
-- name: install mtr
+- name: install mtr, tcpdump, nano
   package:
-    name: mtr
+    name: '{{ item }}'
     state: latest
-- name: install tcpdump
-  package:
-    name: tcpdump
-    state: latest
-- name: install nano
-  package:
-    name: nano
-    state: latest
-
+  with_items:
+    - mtr
+    - tcpdump
+    - nano
+    - NetworkManager-glib

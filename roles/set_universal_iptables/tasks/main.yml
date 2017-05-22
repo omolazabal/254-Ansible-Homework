@@ -2,27 +2,14 @@
 - iptables:
     chain: INPUT
     protocol: TCP
-    destination_port: 21
+    destination_port: '{{ item }}'
     jump: ACCEPT
   become: yes
-- iptables:
-    chain: INPUT
-    protocol: TCP
-    destination_port: 22
-    jump: ACCEPT
-  become: yes
-- iptables:
-    chain: INPUT
-    protocol: TCP
-    destination_port: 53
-    jump: ACCEPT
-  become: yes
-- iptables:
-    chain: INPUT
-    protocol: TCP
-    destination_port: 123
-    jump: ACCEPT
-  become: yes
+  with_items:
+    - 21
+    - 22
+    - 53
+    - 123
 - iptables:
     chain: INPUT
     protocol: UDP
