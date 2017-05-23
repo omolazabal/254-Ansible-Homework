@@ -1,5 +1,5 @@
 ---
-- name: install mtr, tcpdump, nano, NetworkManager-glib
+- name: install mtr, tcpdump, nano
   package:
     name: '{{ item }}'
     state: latest
@@ -7,4 +7,9 @@
     - mtr
     - tcpdump
     - nano
-    - NetworkManager-glib
+- name: install NetworkManager-glib (CentOS machines)
+  package:
+    name: NetworkManager-glib
+    state: latest
+  tags: packages
+  when: ansible_pkg_mgr == 'yum'
