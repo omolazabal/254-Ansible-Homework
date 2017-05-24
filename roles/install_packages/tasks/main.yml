@@ -13,3 +13,10 @@
     state: latest
   tags: packages
   when: ansible_pkg_mgr == 'yum'
+- name: install gir1.2-networkmanager-1.0 (Debian machine)
+  package:
+    name: gir1.2-networkmanager-1.0
+    state: present
+    update_cache: yes
+  tags: packages
+  when: ansible_pkg_mgr == 'apt'
