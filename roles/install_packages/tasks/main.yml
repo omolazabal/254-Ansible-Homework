@@ -13,10 +13,13 @@
     state: latest
   tags: packages
   when: ansible_pkg_mgr == 'yum'
-- name: install gir1.2-networkmanager-1.0 (Debian machine)
+- name: install libnm-glib-dev, python-dbus (Debian machine)
   package:
-    name: gir1.2-networkmanager-1.0
+    name: '{{ item }}'
     state: present
     update_cache: yes
   tags: packages
   when: ansible_pkg_mgr == 'apt'
+  with_items:
+    - libnm-glib-dev
+    - python-dbus
