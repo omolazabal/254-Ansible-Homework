@@ -7,7 +7,6 @@
   become: yes
   with_items:
     - 21
-    - 22
     - 53
     - 123
 - iptables:
