@@ -9,11 +9,13 @@
     - nano
 - name: install NetworkManager-glib (CentOS machines)
   package:
-    name: NetworkManager-glib
+    name: '{{ item }}'
     state: latest
   tags: packages
   when: ansible_pkg_mgr == 'yum'
-- name: install libnm-glib-dev, python-dbus (Debian machine)
+  with_items:
+    - NetworkManager-glib     
+- name: install network-manager, libnm-glib-dev, python-dbus (Debian machine)
   package:
     name: '{{ item }}'
     state: present
@@ -21,5 +23,6 @@
   tags: packages
   when: ansible_pkg_mgr == 'apt'
   with_items:
+    - network-manager
     - libnm-glib-dev
     - python-dbus
