@@ -2,6 +2,7 @@
     chain: INPUT
     protocol: TCP
     destination_port: '{{ item }}'
+    jump: ACCEPT
   when: inventory_hostname in groups['CentOS']
   with_items:
     - 25
@@ -12,6 +13,7 @@
     chain: INPUT
     protocol: TCP
     destination_port: '{{ item }}'
+    jump: ACCEPT
   when: inventory_hostname in groups['CentOS-b']
   with_items:
     - 80
