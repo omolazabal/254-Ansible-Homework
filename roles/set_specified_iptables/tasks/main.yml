@@ -3,6 +3,7 @@
     protocol: TCP
     destination_port: '{{ item }}'
     jump: ACCEPT
+  become: yes
   when: inventory_hostname in groups['CentOS']
   with_items:
     - 25
@@ -14,6 +15,7 @@
     protocol: TCP
     destination_port: '{{ item }}'
     jump: ACCEPT
+  become: yes
   when: inventory_hostname in groups['CentOS-b']
   with_items:
     - 80
