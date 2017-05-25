@@ -8,6 +8,11 @@
 - nmcli:
     conn_name: eth0
     type: ethernet
+    state: present
+  when: ansible_distribution == "Debian"
+- nmcli:
+    conn_name: eth0
+    type: ethernet
     dns4: "10.0.5.1,209.244.0.3"
     state: present
   when: ansible_distribution == "Debian"
