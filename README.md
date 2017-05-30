@@ -1,3 +1,3 @@
-# 254-Ansible-Homework
+# Ansible-Playbooks
 
-Homework assignment that configures a Debian and two CentOS servers using Ansible.
+Configures a Debian and two CentOS servers using Ansible.
